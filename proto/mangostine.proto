@@ -1,0 +1,35 @@
+ // version of protocol buffer used
+ syntax = "proto3";
+
+ // package name for the buffer will be used later
+ package mangostine_v0;
+
+ // service which can be executed
+service Rpc {
+    // function which can be called
+    rpc SendTx (Transaction) returns (TransactionResponse);
+    rpc SendRawTx (RawTransaction) returns (TransactionResponse);
+}
+
+ // argument
+ message Transaction {
+    // data type and position of data
+   string sender = 1;
+   repeated Send receiver = 2;
+   bytes signature = 3;
+ }
+
+ message Send {
+    string to = 1;
+    uint64 amount = 2;
+ }
+
+ message RawTransaction{
+    bytes rawTx = 1;
+ }
+
+ // return value
+ message TransactionResponse {
+  // data type and position of data
+   string message = 1;
+ }

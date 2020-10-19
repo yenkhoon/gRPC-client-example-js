@@ -1,0 +1,25 @@
+{
+  "name": "grpc-client-example",
+  "version": "1.0.0",
+  "description": "gRPC client example",
+  "main": "index.js",
+  "scripts": {
+    "build": "sh proto/build.sh",
+    "start": "tsc && node dist/index.js",
+    "test": "test"
+  },
+  "author": "yk",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/google-protobuf": "^3.7.2",
+    "grpc-tools": "^1.9.1",
+    "grpc_tools_node_protoc_ts": "^4.1.2",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "grpc": "^1.24.3"
+  }
+}
