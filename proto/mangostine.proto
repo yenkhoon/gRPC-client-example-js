@@ -16,7 +16,8 @@ service Rpc {
     // data type and position of data
    string sender = 1;
    repeated Send receiver = 2;
-   bytes signature = 3;
+   bytes public_key = 3;
+   bytes signature = 4;
  }
 
  message Send {

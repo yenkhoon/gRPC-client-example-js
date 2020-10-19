@@ -15,6 +15,11 @@ export class Transaction extends jspb.Message {
     setReceiverList(value: Array<Send>): Transaction;
     addReceiver(value?: Send, index?: number): Send;
 
+    getPublicKey(): Uint8Array | string;
+    getPublicKey_asU8(): Uint8Array;
+    getPublicKey_asB64(): string;
+    setPublicKey(value: Uint8Array | string): Transaction;
+
     getSignature(): Uint8Array | string;
     getSignature_asU8(): Uint8Array;
     getSignature_asB64(): string;
@@ -35,6 +40,7 @@ export namespace Transaction {
     export type AsObject = {
         sender: string,
         receiverList: Array<Send.AsObject>,
+        publicKey: Uint8Array | string,
         signature: Uint8Array | string,
     }
 }

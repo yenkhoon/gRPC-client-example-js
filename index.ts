@@ -1,1 +1,3 @@
-console.log("abc");
+import sendTx from "./Client/send-transaction"
+
+sendTx();

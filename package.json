@@ -4,10 +4,15 @@
   "description": "gRPC client example",
   "main": "index.js",
   "scripts": {
-    "build": "sh proto/build.sh",
-    "start": "tsc && node dist/index.js",
+    "build-proto": "sh proto/build.sh",
+    "start": "rimraf dist && tsc && cp -rf proto dist/proto && node dist/index.js",
     "test": "test"
   },
+  "keywords": [
+    "Node.js",
+    "gRPC",
+    "TypeScript"
+  ],
   "author": "yk",
   "license": "MIT",
   "devDependencies": {
