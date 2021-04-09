@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build-proto": "sh proto/build.sh",
-    "start": "rimraf dist && tsc && cp -rf proto dist/proto && node dist/index.js",
+    "start": "rimraf dist && eslint . --ext .ts && tsc && cp -rf proto dist/proto && node dist/index.js",
     "test": "test"
   },
   "keywords": [
